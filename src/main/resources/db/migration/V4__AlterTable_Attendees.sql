@@ -1,0 +1,2 @@
+ALTER TABLE Attendees ADD CONSTRAINT fk_training_course_id  FOREIGN KEY (training_course_id)  REFERENCES Training_Course(id);
+ALTER TABLE Feedbacks ADD CONSTRAINT fk_attendees_id  FOREIGN KEY (attendees_id)  REFERENCES Attendees(id);
