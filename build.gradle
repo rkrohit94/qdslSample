@@ -33,11 +33,13 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile("org.springframework.boot:spring-boot-starter-mail")
 //
 //
-	compile("com.mysema.querydsl:querydsl-apt:3.7.4:jpa")
-	compile "com.mysema.querydsl:querydsl-jpa:3.6.3"
-	compile group: 'com.mysema.querydsl', name: 'querydsl-sql', version: '3.7.4'
+//
+//	compile("com.mysema.querydsl:querydsl-apt:3.7.4:jpa")
+//	compile "com.mysema.querydsl:querydsl-jpa:3.6.3"
+//	compile group: 'com.mysema.querydsl', name: 'querydsl-sql', version: '3.7.4'
 
 }
 
