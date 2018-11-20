@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
-@Table(name = "Feedbacks")
+@Table(name = "feedbacks")
 public class Feedbacks {
     private int id;
     private int version;

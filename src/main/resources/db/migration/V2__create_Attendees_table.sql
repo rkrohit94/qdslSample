@@ -1,4 +1,4 @@
-CREATE TABLE `Attendees` (
+CREATE TABLE `attendees` (
   `id`                 INT           NOT NULL  AUTO_INCREMENT,
   `version`            INT           NOT NULL  DEFAULT 0,
   `ntid`               VARCHAR(255)  NOT NULL,

@@ -1,4 +1,4 @@
-CREATE TABLE `Feedbacks` (
+CREATE TABLE `feedbacks` (
   `id`                          INT           NOT NULL  AUTO_INCREMENT,
   `version`                     INT           NOT NULL  DEFAULT 0,
   `attendees_id`                INT           NOT NULL,
