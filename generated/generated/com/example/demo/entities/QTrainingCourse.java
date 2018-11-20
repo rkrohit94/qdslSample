@@ -31,7 +31,11 @@ public class QTrainingCourse extends EntityPathBase<TrainingCourse> {
 
     public final DateTimePath<java.util.Date> trainingDate = createDateTime("trainingDate", java.util.Date.class);
 
+    public final DateTimePath<java.util.Date> trainingEndTime = createDateTime("trainingEndTime", java.util.Date.class);
+
     public final StringPath trainingName = createString("trainingName");
+
+    public final DateTimePath<java.util.Date> trainingStartTime = createDateTime("trainingStartTime", java.util.Date.class);
 
     public final NumberPath<Integer> version = createNumber("version", Integer.class);
 

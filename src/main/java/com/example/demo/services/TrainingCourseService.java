@@ -17,7 +17,7 @@ public class TrainingCourseService {
         return this.trainingCourseRepository.save(trainingCourse);
     }
 
-    public List<TrainingCourse> findForNtid(String ntid){
+    public TrainingCourse findForNtid(String ntid){
         return this.trainingCourseRepository.findForNtid(ntid);
     }
     public Iterable<TrainingCourse> findAllTraining(){

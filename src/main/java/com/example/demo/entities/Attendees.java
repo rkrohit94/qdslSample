@@ -15,9 +15,11 @@ public class Attendees {
     private String ntid;
     private String dcio;
     private int trainingCourseId;
+    private Boolean attended;
     private Date attendenceTime;
     private Date createdDate;
     private Date modifiedDate;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,6 +60,14 @@ public class Attendees {
     }
     public void setTrainingCourseId(int trainingCourseId) {
         this.trainingCourseId = trainingCourseId;
+    }
+
+    @NotNull
+    public Boolean getAttended() {
+        return attended;
+    }
+    public void setAttended(Boolean attended) {
+        this.attended = attended;
     }
 
     @NotNull
