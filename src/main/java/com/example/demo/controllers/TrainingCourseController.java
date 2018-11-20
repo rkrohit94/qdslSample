@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.entities.Person;
 import com.example.demo.entities.TrainingCourse;
 import com.example.demo.services.AttendeesService;
+import com.example.demo.services.FeedbacksService;
 import com.example.demo.services.TrainingCourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,9 @@ public class TrainingCourseController {
     private TrainingCourseService trainingCourseService;
     @Autowired
     private AttendeesService attendeesService;
+
+    @Autowired
+    private FeedbacksService feedbacksService;
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/listTraining", method = RequestMethod.GET)
@@ -34,5 +38,11 @@ public class TrainingCourseController {
     public List<TrainingCourse> findAllTrainingByNtid(@PathVariable String ntid){
         return this.trainingCourseService.findForNtid(ntid);
     }
+
+    @RequestMapping(value = "/sendfeedbackRequest/{trainingId}", method = RequestMethod.GET)
+    public String  sendMail(@PathVariable int trainingId){
+        return this.feedbacksService.sendMailForFeedback(trainingId);
+    }
+
 
 }
