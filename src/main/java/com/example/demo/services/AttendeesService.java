@@ -53,7 +53,7 @@ public class AttendeesService {
                 Message message = new MimeMessage(session);
 
                 // Set From: header field of the header.
-                message.setFrom(new InternetAddress("High5@allstate.com"));
+                message.setFrom(new InternetAddress("LLD@allstate.com"));
 
 //Testing only code:**************************** remove it post POC
 
