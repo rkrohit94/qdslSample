@@ -123,8 +123,8 @@ public class FeedbacksService {
                     "<div>\n" +
                     "<table>\n" +
                     "<tr><td>Hi, </td></tr>\n" +
-                    "<tr><td>Please mark your attendance for “<<trainingName>>” Training Program on <<trainingDate>></td></tr><br/><br/>\n" +
-                    "<tr><td>Click here to mark your attendance <<link>></td></tr><br/>\n" +
+                    "<tr><td>Please fill your feedback for “<<trainingName>>” Training Program on <<trainingDate>></td></tr><br/><br/>\n" +
+                    "<tr><td>Click here to fill your feedback <<link>></td></tr><br/>\n" +
                     "<tr><td>(PLEASE NOTE: If the link does not work, kindly go to talent connection directly and nominate yourself for the program)</td></tr>\n" +
                     "<tr><td>Thanks & Regards</td></tr><br/>\n" +
                     "<tr><td>Learning & Leadership Development Team</td></tr>\n" +
@@ -162,5 +162,9 @@ public class FeedbacksService {
         }
         // System.out.println("Sent message successfully....");
         return "Sent message successfully";
+    }
+
+    public List<Feedbacks> getFeedBack(int trainingId) {
+        return this.iFeedbacksRepository.getFeedBack(trainingId);
     }
 }

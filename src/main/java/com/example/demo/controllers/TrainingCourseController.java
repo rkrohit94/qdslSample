@@ -44,4 +44,9 @@ public class TrainingCourseController {
         return this.feedbacksService.sendMailForFeedback(trainingId);
     }
 
+    @RequestMapping(value = "/send-reminder/{trainingId}" , method = RequestMethod.GET)
+    public String sendReminder(@PathVariable int trainingId){
+        return this.attendeesService.sendMailForReminder(trainingId);
+    }
+
 }
