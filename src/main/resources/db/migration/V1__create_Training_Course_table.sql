@@ -1,4 +1,4 @@
-CREATE TABLE `Training_Course` (
+CREATE TABLE `training_course` (
   `id`            INT           NOT NULL  AUTO_INCREMENT,
   `version`       INT           NOT NULL  DEFAULT 0,
   `training_name` VARCHAR(255)  NOT NULL,
