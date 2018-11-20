@@ -29,6 +29,7 @@ public class TrainingCourseController {
         return this.trainingCourseService.findAllTraining();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/markAttendence/{trainingId}", method = RequestMethod.GET)
     public String  findAllTraining(@PathVariable int trainingId){
 
@@ -46,11 +47,13 @@ public class TrainingCourseController {
         return this.trainingCourseService.findTrainingCourseBasedOnId(trainingId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/sendfeedbackRequest/{trainingId}", method = RequestMethod.GET)
     public String  sendMail(@PathVariable int trainingId){
         return this.feedbacksService.sendMailForFeedback(trainingId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/send-reminder/{trainingId}" , method = RequestMethod.GET)
     public String sendReminder(@PathVariable int trainingId){
         return this.attendeesService.sendMailForReminder(trainingId);
