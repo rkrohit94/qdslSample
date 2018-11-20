@@ -18,6 +18,7 @@ public class TrainingCourseController {
     @Autowired
     private AttendeesService attendeesService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/listTraining", method = RequestMethod.GET)
     public Iterable<TrainingCourse> findAllTraining(){
         return this.trainingCourseService.findAllTraining();
