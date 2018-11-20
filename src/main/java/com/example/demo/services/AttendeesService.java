@@ -8,9 +8,7 @@ import com.example.demo.repositories.ITrainingCourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Properties;
+import java.util.*;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -99,5 +97,19 @@ public class AttendeesService {
         }
         // System.out.println("Sent message successfully....");
         return "Sent message successfully";
+    }
+
+    public Map<String,String> markAttendence(Attendees attendees,String passPharse) {
+        Optional<TrainingCourse> trainingCourse = this.iTrainingCourseRepository.findById(attendees.getTrainingCourseId());
+        Map<String,String> map = new HashMap<>();
+        if(trainingCourse.get().getPassphrase().equalsIgnoreCase(passPharse)){
+            attendees.setAttended(true);
+            Attendees attendees1 = this.saveAttendees(attendees);
+            map.put("message","Attendence marked sucessfully");
+        }
+        else{
+            map.put("message","Attendence Not marked");
+        }
+        return map;
     }
 }

@@ -19,6 +19,8 @@ public class QAttendees extends EntityPathBase<Attendees> {
 
     public static final QAttendees attendees = new QAttendees("attendees");
 
+    public final BooleanPath attended = createBoolean("attended");
+
     public final DateTimePath<java.util.Date> attendenceTime = createDateTime("attendenceTime", java.util.Date.class);
 
     public final DateTimePath<java.util.Date> createdDate = createDateTime("createdDate", java.util.Date.class);

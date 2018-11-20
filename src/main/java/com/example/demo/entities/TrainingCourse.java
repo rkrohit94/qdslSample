@@ -15,6 +15,8 @@ public class TrainingCourse {
     private String trainingName;
     private int capacity;
     private Date trainingDate;
+    private Date trainingStartTime;
+    private Date trainingEndTime;
     private String passphrase;
     private Date createdDate;
     private Date modifiedDate;
@@ -58,6 +60,22 @@ public class TrainingCourse {
     }
     public void setTrainingDate(Date trainingDate) {
         this.trainingDate = trainingDate;
+    }
+
+
+    public Date getTrainingStartTime() {
+        return trainingStartTime;
+    }
+    public void setTrainingStartTime(Date trainingStartTime) {
+        this.trainingStartTime = trainingStartTime;
+    }
+
+
+    public Date getTrainingEndTime() {
+        return trainingEndTime;
+    }
+    public void setTrainingEndTime(Date trainingEndTime) {
+        this.trainingEndTime = trainingEndTime;
     }
 
     @NotNull

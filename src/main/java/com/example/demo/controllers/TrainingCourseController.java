@@ -35,7 +35,7 @@ public class TrainingCourseController {
     }
 
     @RequestMapping(value = "/list/{ntid}", method = RequestMethod.GET)
-    public List<TrainingCourse> findAllTrainingByNtid(@PathVariable String ntid){
+    public TrainingCourse findAllTrainingByNtid(@PathVariable String ntid){
         return this.trainingCourseService.findForNtid(ntid);
     }
 
@@ -43,6 +43,5 @@ public class TrainingCourseController {
     public String  sendMail(@PathVariable int trainingId){
         return this.feedbacksService.sendMailForFeedback(trainingId);
     }
-
 
 }
