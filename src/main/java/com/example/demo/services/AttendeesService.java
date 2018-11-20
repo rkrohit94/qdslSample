@@ -3,11 +3,12 @@ package com.example.demo.services;
 import com.example.demo.entities.Attendees;
 import com.example.demo.entities.TrainingCourse;
 import com.example.demo.repositories.IAttendeesRepository;
-//import org.hibernate.Session;
 import com.example.demo.repositories.ITrainingCourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.List;
+import java.util.Optional;
+import java.util.Properties;
 import java.util.*;
 
 import javax.mail.*;
@@ -97,6 +98,11 @@ public class AttendeesService {
         }
         // System.out.println("Sent message successfully....");
         return "Sent message successfully";
+    }
+
+
+    public Optional<Attendees> findAttendeeBasedOnId(int attendeeId) {
+        return this.iAttendeesRepository.findById(attendeeId);
     }
 
     public Map<String,String> markAttendence(Attendees attendees,String passPharse) {

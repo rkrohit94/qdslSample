@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TrainingCourseService {
@@ -21,5 +22,9 @@ public class TrainingCourseService {
     }
     public Iterable<TrainingCourse> findAllTraining(){
         return this.trainingCourseRepository.findAll();
+    }
+
+    public Optional<TrainingCourse> findTrainingCourseBasedOnId(int trainingId) {
+        return this.trainingCourseRepository.findById(trainingId);
     }
 }

@@ -50,7 +50,7 @@ public class FeedbacksService {
         feedbacks.setFacilitatorEffectiveness(ConvertArrayToJSONStringFacilitatorEffectiveness(feedbackModel.getFacilitatorEffectiveness()));
         feedbacks.setOverallRating(ConvertArrayToJSONStringOverallRating(feedbackModel.getOverallRating()));
         feedbacks.setProgramEffectiveness(ConvertArrayToJSONStringProgramEffectiveness(feedbackModel.getProgramEffectiveness()));
-
+        feedbacks.setTrainerName(feedbackModel.getTrainerName());
         return this.iFeedbacksRepository.save(feedbacks);
     }
 

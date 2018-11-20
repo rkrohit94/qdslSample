@@ -5,7 +5,7 @@ import com.example.demo.services.AttendeesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
+import java.util.Optional;
 import java.util.Map;
 
 @RestController
@@ -20,6 +20,11 @@ public class AttendeesController {
         return this.attendeesService.saveAttendees(attendees);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping(value = "/findAttendeeBasedOnId/{attendeeId}", method = RequestMethod.GET)
+    public Optional<Attendees> findAttendeeBasedOnId(@PathVariable int attendeeId){
+        return this.attendeesService.findAttendeeBasedOnId(attendeeId);
+    }
     @RequestMapping(value = {"/mark-attendence"} , method = RequestMethod.POST)
     public Map<String,String> markAttendence(@RequestBody Attendees attendees, @RequestParam String passPharse){
         return this.attendeesService.markAttendence(attendees,passPharse);
