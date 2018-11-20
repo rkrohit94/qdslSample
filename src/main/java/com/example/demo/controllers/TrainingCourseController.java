@@ -36,7 +36,8 @@ public class TrainingCourseController {
         return this.attendeesService.sendMailForAttendence(trainingId);
     }
 
-    @RequestMapping(value = "/list/{ntid}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping(value = "/findTrainingByNtid/{ntid}", method = RequestMethod.GET)
     public TrainingCourse findAllTrainingByNtid(@PathVariable String ntid){
         return this.trainingCourseService.findForNtid(ntid);
     }

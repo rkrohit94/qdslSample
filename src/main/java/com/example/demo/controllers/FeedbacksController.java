@@ -22,6 +22,7 @@ public class FeedbacksController {
         return this.feedbacksService.saveFeedbacks(feedbackModel);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = {"/report/{trainingId}"}  , method = RequestMethod.GET)
     public List<Feedbacks> getFeedBack(@PathVariable int trainingId){
         return this.feedbacksService.getFeedBack(trainingId);
