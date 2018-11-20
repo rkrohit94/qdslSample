@@ -101,16 +101,18 @@ public class AttendeesService {
     }
 
 
-    public Optional<Attendees> findAttendeeBasedOnId(int attendeeId) {
-        return this.iAttendeesRepository.findById(attendeeId);
+    public Optional<Attendees> findAttendeeBasedOnNtid(String Ntid) {
+        return this.iAttendeesRepository.findAttendeeBasedOnNtid(Ntid);
     }
 
     public Map<String,String> markAttendence(Attendees attendees,String passPharse) {
         Optional<TrainingCourse> trainingCourse = this.iTrainingCourseRepository.findById(attendees.getTrainingCourseId());
         Map<String,String> map = new HashMap<>();
         if(trainingCourse.get().getPassphrase().equalsIgnoreCase(passPharse)){
-            attendees.setAttended(true);
-            Attendees attendees1 = this.saveAttendees(attendees);
+            Attendees attendeesInfo = this.iAttendeesRepository.findByNtid(attendees.getNtid());
+            attendeesInfo.setAttended(true);
+            attendeesInfo.setAttendenceTime(attendees.getAttendenceTime());
+            Attendees attendees1 = this.saveAttendees(attendeesInfo);
             map.put("message","Attendence marked sucessfully");
         }
         else{
