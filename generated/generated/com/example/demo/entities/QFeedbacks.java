@@ -25,15 +25,15 @@ public class QFeedbacks extends EntityPathBase<Feedbacks> {
 
     public final DateTimePath<java.util.Date> createdDate = createDateTime("createdDate", java.util.Date.class);
 
-    public final NumberPath<Integer> facilitatorEffectiveness = createNumber("facilitatorEffectiveness", Integer.class);
+    public final StringPath facilitatorEffectiveness = createString("facilitatorEffectiveness");
 
     public final NumberPath<Integer> id = createNumber("id", Integer.class);
 
     public final DateTimePath<java.util.Date> modifiedDate = createDateTime("modifiedDate", java.util.Date.class);
 
-    public final NumberPath<Integer> overallRating = createNumber("overallRating", Integer.class);
+    public final StringPath overallRating = createString("overallRating");
 
-    public final NumberPath<Integer> programEffectiveness = createNumber("programEffectiveness", Integer.class);
+    public final StringPath programEffectiveness = createString("programEffectiveness");
 
     public final NumberPath<Integer> version = createNumber("version", Integer.class);
 

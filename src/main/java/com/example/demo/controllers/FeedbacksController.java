@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.Attendees;
 import com.example.demo.entities.Feedbacks;
+import com.example.demo.model.FeedbackModel;
 import com.example.demo.services.FeedbacksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +17,7 @@ public class FeedbacksController {
     private FeedbacksService feedbacksService;
 
     @RequestMapping(value = {"","/"}  , method = RequestMethod.POST)
-    public Feedbacks approvalWorkFlow(@RequestBody Feedbacks feedbacks){
-        return this.feedbacksService.saveFeedbacks(feedbacks);
+    public Feedbacks approvalWorkFlow(@RequestBody FeedbackModel feedbackModel){
+        return this.feedbacksService.saveFeedbacks(feedbackModel);
     }
 }

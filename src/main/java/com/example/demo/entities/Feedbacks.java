@@ -13,10 +13,10 @@ public class Feedbacks {
     private int id;
     private int version;
     private int attendeesId;
-    private int programEffectiveness;
-    private int facilitatorEffectiveness;
+    private String programEffectiveness;
+    private String facilitatorEffectiveness;
     private String comments;
-    private int overallRating;
+    private String overallRating;
     private Date createdDate;
     private Date modifiedDate;
 
@@ -46,18 +46,18 @@ public class Feedbacks {
     }
 
     @NotNull
-    public int getProgramEffectiveness() {
+    public String getProgramEffectiveness() {
         return programEffectiveness;
     }
-    public void setProgramEffectiveness(int programEffectiveness) {
+    public void setProgramEffectiveness(String programEffectiveness) {
         this.programEffectiveness = programEffectiveness;
     }
 
     @NotNull
-    public int getFacilitatorEffectiveness() {
+    public String getFacilitatorEffectiveness() {
         return facilitatorEffectiveness;
     }
-    public void setFacilitatorEffectiveness(int facilitatorEffectiveness) {
+    public void setFacilitatorEffectiveness(String facilitatorEffectiveness) {
         this.facilitatorEffectiveness = facilitatorEffectiveness;
     }
 
@@ -70,10 +70,10 @@ public class Feedbacks {
     }
 
     @NotNull
-    public int getOverallRating() {
+    public String getOverallRating() {
         return overallRating;
     }
-    public void setOverallRating(int overallRating) {
+    public void setOverallRating(String overallRating) {
         this.overallRating = overallRating;
     }
 
