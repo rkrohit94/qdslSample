@@ -8,6 +8,7 @@ public class FeedbackModel {
     private List<FacilitatorEffectiveness> facilitatorEffectiveness;
     private String comments;
     private List<OverallRating> overallRating;
+    private String trainerName;
 
     public int getAttendeesId() {
         return attendeesId;
@@ -47,5 +48,13 @@ public class FeedbackModel {
 
     public void setOverallRating(List<OverallRating> overallRating) {
         this.overallRating = overallRating;
+    }
+
+    public String getTrainerName() {
+        return trainerName;
+    }
+
+    public void setTrainerName(String trainerName) {
+        this.trainerName = trainerName;
     }
 }

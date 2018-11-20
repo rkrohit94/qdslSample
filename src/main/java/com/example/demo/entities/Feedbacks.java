@@ -19,6 +19,7 @@ public class Feedbacks {
     private String overallRating;
     private Date createdDate;
     private Date modifiedDate;
+    private String trainerName;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -91,5 +92,13 @@ public class Feedbacks {
     }
     public void setModifiedDate(Date modifiedDate) {
         this.modifiedDate = modifiedDate;
+    }
+
+    @NotNull
+    public String getTrainerName() {
+        return trainerName;
+    }
+    public void setTrainerName(String trainerName) {
+        this.trainerName = trainerName;
     }
 }

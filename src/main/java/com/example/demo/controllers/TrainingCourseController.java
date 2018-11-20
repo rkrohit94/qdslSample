@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.entities.Attendees;
 import com.example.demo.entities.Person;
 import com.example.demo.entities.TrainingCourse;
 import com.example.demo.services.AttendeesService;
@@ -35,4 +36,9 @@ public class TrainingCourseController {
         return this.trainingCourseService.findForNtid(ntid);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping(value = "/findTrainingCourseBasedOnId/{trainingId}", method = RequestMethod.GET)
+    public Optional<TrainingCourse> findTrainingCourseBasedOnId(@PathVariable int trainingId){
+        return this.trainingCourseService.findTrainingCourseBasedOnId(trainingId);
+    }
 }

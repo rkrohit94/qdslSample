@@ -35,6 +35,8 @@ public class QFeedbacks extends EntityPathBase<Feedbacks> {
 
     public final StringPath programEffectiveness = createString("programEffectiveness");
 
+    public final StringPath trainerName = createString("trainerName");
+
     public final NumberPath<Integer> version = createNumber("version", Integer.class);
 
     public QFeedbacks(String variable) {

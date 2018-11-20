@@ -6,6 +6,7 @@ CREATE TABLE `feedbacks` (
   `facilitator_effectiveness`   VARCHAR(1000) NOT NULL,
   `comments`                    VARCHAR(1000) NOT NULL,
   `overall_rating`              VARCHAR(1000) NOT NULL,
+  `trainer_name`                VARCHAR(100)  NOT NULL,
   `created_date`                TIMESTAMP     NOT NULL  DEFAULT NOW(),
   `modified_date`               TIMESTAMP     NOT NULL  DEFAULT NOW(),
   PRIMARY KEY (`id`));
